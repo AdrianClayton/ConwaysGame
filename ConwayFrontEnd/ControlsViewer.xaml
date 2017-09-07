@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ConwayFrontEnd.ControlsViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ConwayFrontEnd"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" >
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="502" Margin="25,192,0,0" VerticalAlignment="Top" Width="245" Background="LightYellow">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="122*" />
+                <ColumnDefinition Width="123*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Survival Rules:"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Spawn Rules:"/>
+            <CheckBox Grid.Row="1" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">1</CheckBox>
+            <CheckBox Grid.Row="2" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">2</CheckBox>
+            <CheckBox Grid.Row="3" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">3</CheckBox>
+            <CheckBox Grid.Row="4" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">4</CheckBox>
+            <CheckBox Grid.Row="5" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">5</CheckBox>
+            <CheckBox Grid.Row="6" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">6</CheckBox>
+            <CheckBox Grid.Row="7" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">7</CheckBox>
+            <CheckBox Grid.Row="8" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">8</CheckBox>
+            <CheckBox Grid.Row="9" Grid.Column="0" Checked="SurvivalCheckBox_Checked" Unchecked="SurvivalCheckBox_Unchecked">0</CheckBox>
+            <CheckBox Grid.Row="1" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">1</CheckBox>
+            <CheckBox Grid.Row="2" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">2</CheckBox>
+            <CheckBox Grid.Row="3" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">3</CheckBox>
+            <CheckBox Grid.Row="4" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">4</CheckBox>
+            <CheckBox Grid.Row="5" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">5</CheckBox>
+            <CheckBox Grid.Row="6" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">6</CheckBox>
+            <CheckBox Grid.Row="7" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">7</CheckBox>
+            <CheckBox Grid.Row="8" Grid.Column="1" Checked="SpawnCheckBox_Checked" Unchecked="SpawnCheckBox_Unchecked">8</CheckBox>
+        </Grid>
+        <Button x:Name="button" Content="Next State" HorizontalAlignment="Left" Height="40" Margin="75,77,0,0" VerticalAlignment="Top" Width="108" Click="ProgressButton_Click"/>
+        <Label x:Name="label" Content="Select Rules" HorizontalAlignment="Left" Height="30" Margin="25,160,0,0" VerticalAlignment="Top" Width="226"/>
+    </Grid>
+</UserControl>

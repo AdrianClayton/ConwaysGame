@@ -1,0 +1,8 @@
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\bin\Debug\Conway.Tests.dll
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\bin\Debug\Conway.Tests.pdb
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\obj\Debug\Conway.Tests.csprojResolveAssemblyReference.cache
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\obj\Debug\Conway.Tests.dll
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\obj\Debug\Conway.Tests.pdb
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\bin\Debug\GameObjects.dll
+c:\users\adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\Conway.Tests\bin\Debug\GameObjects.pdb

@@ -1,0 +1,15 @@
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\bin\Release\ConwayFrontEnd.exe.config
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\bin\Release\ConwayFrontEnd.exe
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\bin\Release\ConwayFrontEnd.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\MainWindow.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\GridSegment.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\App.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd_MarkupCompile.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd_MarkupCompile.lref
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\MainWindow.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\GridSegment.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd.g.resources
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd.Properties.Resources.resources
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd.csproj.GenerateResource.Cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd.exe
+C:\Users\Adrian\documents\visual studio 2015\Projects\ConwayGameOfLife\ConwayFrontEnd\obj\Release\ConwayFrontEnd.pdb
