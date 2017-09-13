@@ -39,7 +39,7 @@ namespace GameObjects
             get
             {
                 Map newMap = new Map();
-                foreach(LivingCell cell in _map.LivingCells)
+                foreach(LivingCell cell in _map.LivingCells.Values)
                 {
                     newMap.AddCellAtCoordinate(cell.Coordinate);
                 }
@@ -48,7 +48,7 @@ namespace GameObjects
             set
             {
                 Map newMap = new Map();
-                foreach (LivingCell cell in value.LivingCells)
+                foreach (LivingCell cell in value.LivingCells.Values)
                 {
                     newMap.AddCellAtCoordinate(cell.Coordinate);
                 }
@@ -80,13 +80,13 @@ namespace GameObjects
         bool ParseRules()
         {
 
-            List<LivingCell> RollBack = new List<LivingCell>(_map.LivingCells);
+            var RollBack = new List<LivingCell>(_map.LivingCells.Values);
             try
             {
                 if (_activeRules.Count > 0)
                 {
-                    List<Coordinate> rawCellsToSpawn = new List<Coordinate>();
-                    List<LivingCell> CellsToRemove = new List<LivingCell>(_map.LivingCells);
+                    var rawCellsToSpawn = new List<Coordinate>();
+                    var CellsToRemove = new List<LivingCell>(_map.LivingCells.Values);
 
                     foreach (SingleRule rule in _activeRules)
                     {
@@ -101,7 +101,7 @@ namespace GameObjects
                         }
                     }
 
-                    List<Coordinate> cellsToSpawn = rawCellsToSpawn.Distinct().ToList();
+                    var cellsToSpawn = rawCellsToSpawn.Distinct().ToList();
                     foreach (Coordinate coordinate in cellsToSpawn)
                     {
                         _map.AddCellAtCoordinate(coordinate);
@@ -123,14 +123,14 @@ namespace GameObjects
             }
         }
         
-        List<Coordinate> ParseSpawnRule(int ruleNumber)
+        var ParseSpawnRule(int ruleNumber)
         {
             if (ruleNumber < 1 || ruleNumber > 8 )
             {
                 throw new ArgumentOutOfRangeException();
             }
-            List<Coordinate> rawCellsToSpawn = new List<Coordinate>();         
-            foreach (LivingCell cell in _map.LivingCells)                                         
+            var rawCellsToSpawn = new List<Coordinate>();         
+            foreach (LivingCell cell in _map.LivingCells.Values)                                         
             {
                 foreach(Coordinate candidate in cell.Coordinate.SurroundingCoordinates())
                 {
@@ -154,8 +154,8 @@ namespace GameObjects
             {
                 throw new ArgumentOutOfRangeException();
             }
-            List<LivingCell> CellsToRemove = new List<LivingCell>(removalCandidates);
-            foreach (LivingCell candidate in _map.LivingCells)
+            var CellsToRemove = new List<LivingCell>(removalCandidates);
+            foreach (LivingCell candidate in _map.LivingCells.Values)
             {
                 int surroundingNumber = candidate.Coordinate.NumberOfSurroundingLivingCells(_map);
 

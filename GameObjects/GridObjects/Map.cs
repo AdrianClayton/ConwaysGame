@@ -9,9 +9,9 @@ namespace GameObjects
     public class Map
     {
 
-        private List<LivingCell> _livingCells = new List<LivingCell>();
+        private Dictionary<Coordinate, LivingCell> _livingCells = new Dictionary<Coordinate, LivingCell>();
 
-        public List<LivingCell> LivingCells
+        public Dictionary<Coordinate, LivingCell> LivingCells
         {
             get { return _livingCells; }
         }
@@ -22,7 +22,7 @@ namespace GameObjects
             LivingCell ExistingCell = FindCellAtCoordinate(cellToAdd.Coordinate);
             if (ExistingCell == null)
             {
-                LivingCells.Add(cellToAdd);
+                _livingCells.Add(cellToAdd.Coordinate, cellToAdd);
             }
             else
             {
@@ -37,8 +37,7 @@ namespace GameObjects
 
         public bool RemoveCellAtCoordinate(Coordinate deadCellCoordinate)
         {
-            LivingCell deadCell = FindCellAtCoordinate(deadCellCoordinate);
-            return LivingCells.Remove(deadCell);
+            return _livingCells.Remove(deadCellCoordinate);
         }
 
         public bool RemoveCell(LivingCell cell)
@@ -48,16 +47,10 @@ namespace GameObjects
 
         public LivingCell FindCellAtCoordinate(Coordinate coordinate)
         {
-            List<LivingCell> ExistingCells = (List<LivingCell>)LivingCells.Where(z => z.Coordinate.Equals(coordinate)).ToList(); ;
-            if (ExistingCells.Count > 1)
-            {
-                throw new ApplicationException(string.Format("There shouldn't be more than one cell at Coordinate x: {0}, y: {1}", coordinate.X, coordinate.Y));
-            }
-            else if (ExistingCells.Count == 1)
-            {
-                return ExistingCells[0];
-            }
-            else return null;
+            LivingCell existingCell;
+            _livingCells.TryGetValue(coordinate, out existingCell);
+
+            return existingCell;
         }
     }
 }

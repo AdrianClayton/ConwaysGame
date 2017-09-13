@@ -8,6 +8,8 @@ namespace GameObjects
 {
     public class Coordinate :IEquatable<Coordinate>
     {
+        Coordinate[] _surroundingCoordinates;
+
         public int X { get; }
         public int Y { get; }
 
@@ -31,19 +33,22 @@ namespace GameObjects
 
         public Coordinate[] SurroundingCoordinates()
         {
-            List<Coordinate> neighbors = new List<Coordinate>();
-
-            for(int i = -1; i < 2; i++)
-            {
-                for (int j = -1; j < 2; j++)
+            if(_surroundingCoordinates == null)
                 {
-                    if (i == j && i == 0)
-                        continue;
-                    neighbors.Add(new Coordinate(X + i, Y + j));
-                }
-            }
+                    var neighbors = new List<Coordinate>();
 
-            return neighbors.ToArray();
+                    for (int i = -1; i < 2; i++)
+                    {
+                        for (int j = -1; j < 2; j++)
+                        {
+                            if (i == j && i == 0)
+                                continue;
+                            neighbors.Add(new Coordinate(X + i, Y + j));
+                        }
+                    }
+                _surroundingCoordinates = neighbors.ToArray();
+                }
+            return _surroundingCoordinates;
         }
 
         public int NumberOfSurroundingLivingCells(Map grid)
